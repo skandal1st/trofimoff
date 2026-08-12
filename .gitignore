@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build output (сервер собирает сам через pnpm build)
+dist/
+*.tsbuildinfo
+
+# Локальный прод-архив (артефакт сборки, не версионируем)
+trofimoff-tdistina-production.zip
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+*.log
+~$*

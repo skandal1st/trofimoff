@@ -1,0 +1,294 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-11T22:35:06.7966602+03:00",
+  "title": "Design System: Trofimoff's",
+  "extensions": {
+    "colorMeta": {
+      "warm-paper": {
+        "role": "neutral",
+        "displayName": "Warm Paper",
+        "canonical": "#e8dcc6",
+        "tonalRamp": ["#2b271f", "#514a3c", "#786f5d", "#9f9580", "#c2b7a0", "#ddd1ba", "#eee5d5", "#faf6ee"]
+      },
+      "warm-paper-light": {
+        "role": "neutral",
+        "displayName": "Warm Paper Light",
+        "canonical": "#f2eadb",
+        "tonalRamp": ["#2e2921", "#575044", "#817869", "#aaa08f", "#cdc2af", "#e5dbc9", "#f2eadb", "#fbf7f0"]
+      },
+      "lacquer-wine": {
+        "role": "primary",
+        "displayName": "Lacquer Wine",
+        "canonical": "#4b0713",
+        "tonalRamp": ["#260208", "#4b0713", "#701421", "#962c39", "#ba4d59", "#d77b83", "#ecafb2", "#fae3e3"]
+      },
+      "stage-wine": {
+        "role": "primary",
+        "displayName": "Stage Wine",
+        "canonical": "#55101a",
+        "tonalRamp": ["#280409", "#55101a", "#7c202b", "#a23a45", "#c55c65", "#df858c", "#efb4b7", "#fae4e4"]
+      },
+      "wine-deep": {
+        "role": "primary",
+        "displayName": "Wine Deep",
+        "canonical": "#250508",
+        "tonalRamp": ["#160104", "#31070b", "#54131a", "#79262f", "#9f434d", "#c06972", "#dfa0a5", "#f5dcdd"]
+      },
+      "black-ink": {
+        "role": "neutral",
+        "displayName": "Black Ink",
+        "canonical": "#160b09",
+        "tonalRamp": ["#160b09", "#362925", "#594a45", "#7e6e68", "#a59891", "#c9bdb7", "#e7dfdb", "#f8f3f0"]
+      },
+      "ink-hairline": {
+        "role": "neutral",
+        "displayName": "Ink Hairline",
+        "canonical": "rgba(22, 11, 9, 0.26)",
+        "tonalRamp": ["#160b09", "#362925", "#594a45", "#7e6e68", "#a59891", "#c9bdb7", "#e7dfdb", "#f8f3f0"]
+      },
+      "dusty-berry": {
+        "role": "secondary",
+        "displayName": "Dusty Berry",
+        "canonical": "#ead7d4",
+        "tonalRamp": ["#311c1d", "#583638", "#805356", "#a87375", "#c79596", "#dfb6b5", "#edd7d4", "#faf0ee"]
+      },
+      "cured-tobacco": {
+        "role": "secondary",
+        "displayName": "Cured Tobacco",
+        "canonical": "#b9a07a",
+        "tonalRamp": ["#2b2419", "#51432f", "#776348", "#9d8461", "#b9a07a", "#d1ba96", "#e6d4b5", "#f8edda"]
+      },
+      "botanical-khaki": {
+        "role": "secondary",
+        "displayName": "Botanical Khaki",
+        "canonical": "#d8d5b8",
+        "tonalRamp": ["#29291e", "#4d4d39", "#727157", "#979674", "#b9b795", "#d3d0ae", "#e8e5ca", "#f7f5e7"]
+      },
+      "burnt-drink": {
+        "role": "secondary",
+        "displayName": "Burnt Drink",
+        "canonical": "#a64b36",
+        "tonalRamp": ["#35150e", "#60291c", "#893e2c", "#a64b36", "#c56a54", "#dd917d", "#efbaaa", "#fbe5dc"]
+      },
+      "dessert-clay": {
+        "role": "secondary",
+        "displayName": "Dessert Clay",
+        "canonical": "#9a7358",
+        "tonalRamp": ["#2c1f17", "#51392b", "#765540", "#9a7358", "#b89478", "#d0b39b", "#e5d1c0", "#f7eee7"]
+      },
+      "score-sand": {
+        "role": "secondary",
+        "displayName": "Score Sand",
+        "canonical": "#d6c4a6",
+        "tonalRamp": ["#2d271d", "#534835", "#796a4f", "#9f8d6c", "#bda887", "#d6c4a6", "#e8dbc4", "#f8f1e5"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Monumental section titles, flavor heroes, experience words, and next-flavor transitions."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Oversized line names and primary navigational declarations."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Flavor names, stage captions, and search results."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Product descriptions and editorial reading copy."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Tracked uppercase metadata, indices, utilities, and disclosures."
+      }
+    },
+    "shadows": [
+      {
+        "name": "hero-object",
+        "value": "drop-shadow(0 32px 45px rgba(9, 1, 2, 0.42))",
+        "purpose": "Physical weight beneath the featured product on the home stage."
+      },
+      {
+        "name": "row-reveal",
+        "value": "drop-shadow(0 18px 20px rgba(40, 10, 12, 0.2))",
+        "purpose": "Soft separation for the packshot revealed by flavor-row hover or focus."
+      },
+      {
+        "name": "flavor-hero-object",
+        "value": "drop-shadow(0 42px 54px rgba(15, 0, 3, 0.45))",
+        "purpose": "Broad physical shadow under the flavor hero packshot."
+      },
+      {
+        "name": "next-object",
+        "value": "drop-shadow(0 35px 35px rgba(0, 0, 0, 0.35))",
+        "purpose": "Supports the rotated product in the full-bleed next-flavor transition."
+      }
+    ],
+    "motion": [
+      {
+        "name": "state-standard",
+        "value": "0.35s ease",
+        "purpose": "Text color, opacity, and small positional changes on interactive rows."
+      },
+      {
+        "name": "object-settle",
+        "value": "0.5s ease",
+        "purpose": "Packshot translation, rotation, and scale changes."
+      },
+      {
+        "name": "overlay-reveal",
+        "value": "0.55s cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Top-to-bottom clip reveal for the search takeover."
+      },
+      {
+        "name": "loader-curtain",
+        "value": "0.9s cubic-bezier(0.77, 0, 0.18, 1)",
+        "purpose": "Decisive upward curtain close for the intro loader."
+      },
+      {
+        "name": "ambient-float",
+        "value": "7s ease-in-out infinite",
+        "purpose": "Subtle vertical drift and one-degree rotation on flavor hero packshots."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "0.01ms, 1 iteration",
+        "purpose": "Collapses animations and transitions when reduced motion is requested."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "stacked",
+        "value": "820px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Search Trigger",
+      "kind": "button",
+      "refersTo": "search-trigger",
+      "description": "Quiet underlined utility for opening the full-screen search takeover.",
+      "html": "<button class=\"ds-search-trigger\">SEARCH <span class=\"ds-search-mark\" aria-hidden=\"true\"></span></button>",
+      "css": ".ds-search-trigger { border: 0; border-bottom: 1px solid rgba(242, 234, 219, 0.5); background: transparent; padding: 0 0 0.75rem; color: var(--paper-light, #f2eadb); font: 400 0.68rem/1 Manrope, sans-serif; letter-spacing: 0.28em; cursor: pointer; } .ds-search-trigger:hover { color: #fff8eb; } .ds-search-trigger:focus-visible { outline: 2px solid var(--paper-light, #f2eadb); outline-offset: 5px; } .ds-search-trigger:active { transform: translateY(1px); } .ds-search-mark { display: inline-block; position: relative; width: 11px; height: 11px; margin-left: 1.2rem; border: 1px solid currentColor; border-radius: 50%; } .ds-search-mark::after { content: ''; position: absolute; right: -4px; bottom: -2px; width: 5px; height: 1px; background: currentColor; transform: rotate(45deg); }"
+    },
+    {
+      "name": "Line Rail Item",
+      "kind": "nav",
+      "refersTo": "line-rail-item",
+      "description": "Monumental numbered line navigation rendered as a full-width editorial band.",
+      "html": "<button class=\"ds-line-rail\"><span>01</span><strong>BURLEY</strong><em>08</em></button>",
+      "css": ".ds-line-rail { width: 100%; min-height: 116px; display: grid; grid-template-columns: 20% 1fr auto; align-items: center; gap: 1rem; border: 0; border-bottom: 1px solid rgba(232, 220, 198, 0.24); background: transparent; color: rgba(242, 234, 219, 0.42); padding: 0; text-align: left; cursor: pointer; transition: color 0.35s ease, transform 0.35s ease; } .ds-line-rail span { font: 400 4.5rem/0.8 'Bebas Neue', sans-serif; } .ds-line-rail strong { font: 400 3.6rem/0.82 'Bebas Neue', sans-serif; letter-spacing: 0.025em; } .ds-line-rail em { font: 400 0.62rem/1 Manrope, sans-serif; font-style: normal; opacity: 0; } .ds-line-rail:hover, .ds-line-rail:focus-visible { color: var(--paper-light, #f2eadb); transform: translateX(0.55rem); outline: none; } .ds-line-rail:hover em, .ds-line-rail:focus-visible em { opacity: 1; } .ds-line-rail:active { transform: translateX(0.35rem); }"
+    },
+    {
+      "name": "Flavor Row",
+      "kind": "custom",
+      "refersTo": "flavor-row",
+      "description": "Printed-index navigation row for entering a specific flavor experience.",
+      "html": "<a class=\"ds-flavor-row\" href=\"#\"><span>01</span><strong>PERA</strong><small>PEAR · GREEN HERBS · FRESHNESS</small><i aria-hidden=\"true\">↗</i></a>",
+      "css": ".ds-flavor-row { min-height: 112px; display: grid; grid-template-columns: 7% 37% 1fr 2rem; align-items: center; gap: 1rem; border-top: 1px solid var(--rule, rgba(22, 11, 9, 0.26)); color: var(--ink, #160b09); text-decoration: none; } .ds-flavor-row span { font: 400 0.66rem/1 Manrope, sans-serif; } .ds-flavor-row strong { font: 400 4.2rem/0.9 'Bebas Neue', sans-serif; transition: transform 0.4s ease; } .ds-flavor-row small { font: 400 0.72rem/1.4 Manrope, sans-serif; letter-spacing: 0.08em; } .ds-flavor-row i { font: 400 1.5rem/1 Manrope, sans-serif; font-style: normal; } .ds-flavor-row:hover strong, .ds-flavor-row:focus-visible strong { transform: translateX(1rem); } .ds-flavor-row:focus-visible { outline: 2px solid var(--wine, #4b0713); outline-offset: -2px; } .ds-flavor-row:active strong { transform: translateX(0.7rem); }"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "refersTo": "search-field",
+      "description": "Full-width monumental input used inside the paper search takeover.",
+      "html": "<label class=\"ds-search-label\" for=\"ds-search\">FLAVOR, NOTE OR LINE</label><input class=\"ds-search-field\" id=\"ds-search\" placeholder=\"SEARCH\" />",
+      "css": ".ds-search-label { display: block; color: var(--wine, #4b0713); font: 400 0.68rem/1 Manrope, sans-serif; letter-spacing: 0.22em; } .ds-search-field { width: 100%; margin-top: 2rem; border: 0; border-bottom: 1px solid var(--wine, #4b0713); outline: 0; background: transparent; color: var(--wine, #4b0713); padding: 0; font: 400 clamp(5rem, 15vw, 15rem)/0.8 'Bebas Neue', sans-serif; text-transform: uppercase; } .ds-search-field::placeholder { color: rgba(75, 7, 19, 0.58); } .ds-search-field:hover { border-bottom-color: var(--ink, #160b09); } .ds-search-field:focus-visible { border-bottom-width: 2px; } .ds-search-field:active { border-bottom-color: var(--wine, #4b0713); }"
+    },
+    {
+      "name": "Variant Tabs",
+      "kind": "nav",
+      "refersTo": "variant-tab",
+      "description": "Compact line switcher embedded in the flavor hero.",
+      "html": "<div class=\"ds-variant-tabs\"><button class=\"ds-variant-tab ds-is-active\">BURLEY</button><button class=\"ds-variant-tab\">TERROR</button></div>",
+      "css": ".ds-variant-tabs { display: inline-flex; border-bottom: 1px solid rgba(242, 234, 219, 0.35); background: var(--wine, #4b0713); } .ds-variant-tab { border: 0; padding: 1rem 1.4rem; background: transparent; color: rgba(242, 234, 219, 0.45); font: 400 0.65rem/1 Manrope, sans-serif; letter-spacing: 0.16em; cursor: pointer; } .ds-variant-tab:hover, .ds-variant-tab:focus-visible { color: var(--paper, #e8dcc6); outline: none; } .ds-variant-tab:focus-visible { box-shadow: inset 0 -2px var(--paper, #e8dcc6); } .ds-variant-tab:active, .ds-variant-tab.ds-is-active { color: var(--paper, #e8dcc6); box-shadow: inset 0 -2px var(--paper, #e8dcc6); }"
+    },
+    {
+      "name": "Score Row",
+      "kind": "custom",
+      "refersTo": "flavor-row",
+      "description": "Open editorial characteristic row with a thin lacquer progress track.",
+      "html": "<div class=\"ds-score-row\"><span>SWEETNESS</span><div class=\"ds-score-track\"><i style=\"width: 60%\"></i></div><strong>3/5</strong></div>",
+      "css": ".ds-score-row { min-height: 76px; display: grid; grid-template-columns: 22% 1fr 4rem; align-items: center; gap: 1.5rem; border-top: 1px solid var(--rule, rgba(22, 11, 9, 0.26)); color: var(--ink, #160b09); } .ds-score-row span { font: 400 0.68rem/1 Manrope, sans-serif; letter-spacing: 0.12em; } .ds-score-track { height: 5px; background: rgba(75, 7, 19, 0.16); } .ds-score-track i { display: block; height: 100%; background: var(--wine, #4b0713); transition: width 0.5s ease; } .ds-score-row strong { font: 400 2.1rem/1 'Bebas Neue', sans-serif; } .ds-score-row:hover .ds-score-track i { filter: brightness(1.2); } .ds-score-row:focus-within { outline: 2px solid var(--wine, #4b0713); outline-offset: -2px; }"
+    },
+    {
+      "name": "Next Flavor Link",
+      "kind": "custom",
+      "refersTo": "line-rail-item-active",
+      "description": "Full-bleed lacquer poster linking one flavor story to the next.",
+      "html": "<a class=\"ds-next-flavor\" href=\"#\"><span>NEXT FLAVOR</span><strong>KRIEK</strong><svg viewBox=\"0 0 64 64\" aria-hidden=\"true\"><path d=\"M12 32h38M38 20l12 12-12 12\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></svg></a>",
+      "css": ".ds-next-flavor { min-height: 360px; display: grid; align-content: end; position: relative; overflow: hidden; padding: 3rem; background: var(--wine, #4b0713); color: var(--paper, #e8dcc6); text-decoration: none; } .ds-next-flavor span { font: 400 0.62rem/1 Manrope, sans-serif; letter-spacing: 0.2em; } .ds-next-flavor strong { max-width: 80%; font: 400 clamp(7rem, 19vw, 14rem)/0.72 'Bebas Neue', sans-serif; text-transform: uppercase; transition: transform 0.5s ease; } .ds-next-flavor svg { position: absolute; right: 3rem; bottom: 3rem; width: 64px; height: 64px; transition: transform 0.5s ease; } .ds-next-flavor:hover strong, .ds-next-flavor:focus-visible strong { transform: translateX(0.5rem); } .ds-next-flavor:hover svg, .ds-next-flavor:focus-visible svg { transform: translateX(0.5rem); } .ds-next-flavor:focus-visible { outline: 2px solid var(--paper, #e8dcc6); outline-offset: -8px; } .ds-next-flavor:active svg { transform: translateX(0.8rem); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Lacquered Flavor Index",
+    "overview": "Trofimoff's behaves like an editorial product theatre bound into a working catalogue. Burgundy lacquer creates the immersive field; warm paper and black ink turn the assortment into a rigorous printed index. The product remains the protagonist, while the interface recedes into numbers, hairlines, labels, and monumental condensed words.\n\nNavigation is part of the composition rather than a detached control layer. Full-bleed fields, square seams, cropped scale, and recognizable packshots create tension between physical product staging and archival order. The experience is dense in image and type but sparse in chrome; motion is controlled, tactile, and calm.",
+    "keyCharacteristics": [
+      "Burgundy lacquer, warm paper, off-white, and black ink.",
+      "Monumental condensed display type paired with compact neutral utility copy.",
+      "Product theatre used as navigation, not as a detached hero above a catalogue grid.",
+      "Open full-bleed fields divided by one-pixel rules and hard square seams.",
+      "Flavor-specific material colors that extend, but never replace, the core palette."
+    ],
+    "rules": [
+      {
+        "name": "The Lacquer-and-Paper Rule",
+        "body": "Every major surface belongs either to the immersive wine world or the archival paper world; flavor colors appear only as controlled material chapters.",
+        "section": "colors"
+      },
+      {
+        "name": "The One-Ink Rule",
+        "body": "On paper, black ink carries copy and structure; on lacquer, warm paper carries both. Do not introduce a separate UI-gray system.",
+        "section": "colors"
+      },
+      {
+        "name": "The Monument-and-Whisper Rule",
+        "body": "Display type is enormous and compressed; everything operational is small, widely tracked, and visually quiet. Avoid the anonymous middle scale.",
+        "section": "typography"
+      },
+      {
+        "name": "The Two-Face Rule",
+        "body": "Use Bebas Neue for display and named navigation, and Manrope for all descriptive and utility copy. No third interface face is present.",
+        "section": "typography"
+      },
+      {
+        "name": "The Open-Field Rule",
+        "body": "Use edges, rules, and scale to organize space. Do not put catalogue content into centered max-width cards or rounded shells.",
+        "section": "layout"
+      },
+      {
+        "name": "The Object-Only Shadow Rule",
+        "body": "Shadows belong to products, never to interface containers.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Flat-by-Default Rule",
+        "body": "Resting controls and sections are separated by color, one-pixel rules, and composition; no card shadow is used.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Square-Seam Rule",
+        "body": "Keep buttons, inputs, rows, overlays, and section boundaries square. Circles belong only to symbols and orbital product framing.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do let recognizable packshots dominate hero and transition moments.",
+      "Do compose with full-bleed lacquer and paper fields, asymmetric grids, cropped display type, and one-pixel hairlines.",
+      "Do pair pointer hover with an equivalent visible keyboard-focus response.",
+      "Do preserve the stacked mobile hierarchy and complete reduced-motion fallback at the shipped 820px breakpoint.",
+      "Do use flavor-specific fields as bounded chapters within the core wine-and-paper world."
+    ],
+    "donts": [
+      "Don't detach a conventional hero from a generic product-card grid.",
+      "Don't introduce rounded cards, pill buttons, glass panels, decorative gradients, or dashboard chrome.",
+      "Don't add shadows to interface containers; reserve depth effects for physical product imagery.",
+      "Don't shrink the display system into a safe, uniform middle scale.",
+      "Don't allow decorative imagery or motion to obscure product identity, navigation, or factual copy."
+    ]
+  }
+}

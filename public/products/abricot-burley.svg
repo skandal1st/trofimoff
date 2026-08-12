@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2880" height="2880" viewBox="0 0 2880 2880">
+  <defs>
+    <clipPath id="label"><path d="M640 1100 Q1440 1070 2200 1100 L2200 1995 Q1440 2045 640 1995 Z"/></clipPath>
+    <linearGradient id="wrap" x1="0" x2="1">
+      <stop offset="0" stop-color="#8d252e"/>
+      <stop offset="0.12" stop-color="#d74f55"/>
+      <stop offset="0.5" stop-color="#d74f55"/>
+      <stop offset="0.88" stop-color="#d74f55"/>
+      <stop offset="1" stop-color="#8d252e"/>
+    </linearGradient>
+    <linearGradient id="shade" x1="0" x2="1">
+      <stop offset="0" stop-color="#000" stop-opacity=".24"/>
+      <stop offset=".18" stop-color="#fff" stop-opacity=".08"/>
+      <stop offset=".5" stop-color="#fff" stop-opacity=".02"/>
+      <stop offset=".84" stop-color="#000" stop-opacity=".03"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".3"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#label)">
+    <rect x="640" y="1070" width="1560" height="975" fill="url(#wrap)" opacity=".94" style="mix-blend-mode:multiply"/>
+    <rect x="640" y="1070" width="245" height="975" fill="#eee6cf" opacity=".98"/>
+    <rect x="640" y="1070" width="1560" height="975" fill="url(#shade)"/>
+    <text x="762" y="1570" fill="#171414" font-family="Manrope, Arial, sans-serif" font-size="34" letter-spacing="9" text-anchor="middle" transform="rotate(-90 762 1570)">SAINT-PETERSBURG</text>
+    <text x="1515" y="1250" fill="#171414" font-family="Georgia, serif" font-size="46" font-style="italic" text-anchor="middle">Trofimoff's · EST. 2020</text>
+    <text x="1515" y="1570" fill="#111" font-family="Segoe Script, Brush Script MT, cursive" font-size="223" font-style="italic" text-anchor="middle">Abricot</text>
+    <text x="1515" y="1790" fill="#111" font-family="Manrope, Arial, sans-serif" font-size="58" letter-spacing="14" text-anchor="middle">BURLEY</text>
+    <text x="762" y="1900" fill="#171414" font-family="Manrope, Arial, sans-serif" font-size="28" letter-spacing="5" text-anchor="middle">125 ГРАММ</text>
+  </g>
+</svg>

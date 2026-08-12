@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://trofimoff.tdistina.ru/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/pera</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/cantalupo</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/taste</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/truth</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/goodness</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/beauty</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/limoncello</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/wild-strawberry</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/abricot</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/jenever</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/kriek</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/virgin</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/anejo</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/ruby-grapes</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/cookies</loc><priority>0.8</priority></url>
+</urlset>
