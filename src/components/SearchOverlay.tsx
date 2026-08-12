@@ -1,6 +1,6 @@
 import { useDeferredValue, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { getFlavorImage } from "../assets";
+import { getFlavorPreview } from "../assets";
 import { flavors } from "../content";
 
 export function SearchOverlay({ open, onClose }: { open: boolean; onClose: () => void }) {
@@ -59,7 +59,7 @@ export function SearchOverlay({ open, onClose }: { open: boolean; onClose: () =>
       <div className="search-results" aria-live="polite">
         {results.length ? results.map((flavor) => (
           <Link key={flavor.slug} to={`/flavors/${flavor.slug}`} onClick={onClose}>
-            <img src={getFlavorImage(flavor.slug)} alt="" />
+            <img src={getFlavorPreview(flavor.slug)} alt="" />
             <span>{flavor.name}</span>
             <small>{flavor.lines.join(" / ").toUpperCase()}</small>
           </Link>

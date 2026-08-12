@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { CSSProperties } from "react";
 import { Link, useParams, useSearchParams } from "react-router-dom";
-import { getFlavorCinematic, getFlavorImage } from "../assets";
+import { getFlavorCinematic, getFlavorImage, getFlavorPreview } from "../assets";
 import { BrandLogo } from "../components/BrandLogo";
 import { flavors, getFlavor, lines } from "../content";
 import type { LineId } from "../domain";
@@ -278,7 +278,7 @@ export default function FlavorPage() {
       <Link className="next-flavor" to={`/flavors/${nextFlavor.slug}?line=${nextFlavor.lines[0]}`}>
         <span className="next-flavor__label">СЛЕДУЮЩИЙ АРОМАТ</span>
         <strong>{nextFlavor.name}</strong>
-        <img src={getFlavorImage(nextFlavor.slug)} alt="" />
+        <img src={getFlavorPreview(nextFlavor.slug)} alt="" />
       </Link>
     </main>
   );

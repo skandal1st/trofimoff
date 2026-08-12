@@ -1,30 +1,45 @@
 import type { LineId } from "./domain";
 
 const processed = (filename: string) => `/processed/${encodeURIComponent(filename)}`;
-const product = (filename: string) => `/media/higgsfield/${filename}-hero-v1.png`;
+const heroImg = (filename: string) => `/media/higgsfield/${filename}-hero-v1.webp`;
+const previewImg = (filename: string) => `/media/higgsfield/${filename}-preview-v1.webp`;
 
 export const logo = processed("logo.png");
 
-export const flavorImages: Record<string, Partial<Record<LineId | "default", string>>> = {
-  pera: { default: product("pera"), burley: product("pera") },
-  cantalupo: { default: product("cantalupo"), burley: product("cantalupo") },
-  taste: { default: product("taste"), limited: product("taste") },
-  truth: { default: product("truth"), limited: product("truth") },
-  goodness: { default: product("goodness"), limited: product("goodness") },
-  beauty: { default: product("beauty"), limited: product("beauty") },
-  limoncello: { default: product("limoncello"), "no-aroma": product("limoncello") },
-  "wild-strawberry": { default: product("wild-strawberry-burley"), burley: product("wild-strawberry-burley"), terror: product("wild-strawberry-terror") },
-  abricot: { default: product("abricot-burley"), burley: product("abricot-burley"), terror: product("abricot-terror") },
-  jenever: { default: product("jenever"), "no-aroma": product("jenever") },
-  kriek: { default: product("kriek-burley"), burley: product("kriek-burley"), terror: product("kriek-terror") },
-  virgin: { default: product("virgin"), "no-aroma": product("virgin") },
-  anejo: { default: product("anejo"), "no-aroma": product("anejo") },
-  "ruby-grapes": { default: product("ruby-grapes"), burley: product("ruby-grapes") },
-  cookies: { default: product("cookies"), burley: product("cookies") },
+// Базовое имя мастера hero-визуала на вкус/линейку. Из него строятся два WebP:
+// hero (крупные визуалы) и preview (лёгкие превью в списках/поиске).
+const flavorBases: Record<string, Partial<Record<LineId | "default", string>>> = {
+  pera: { default: "pera", burley: "pera" },
+  cantalupo: { default: "cantalupo", burley: "cantalupo" },
+  taste: { default: "taste", limited: "taste" },
+  truth: { default: "truth", limited: "truth" },
+  goodness: { default: "goodness", limited: "goodness" },
+  beauty: { default: "beauty", limited: "beauty" },
+  limoncello: { default: "limoncello", "no-aroma": "limoncello" },
+  "wild-strawberry": { default: "wild-strawberry-burley", burley: "wild-strawberry-burley", terror: "wild-strawberry-terror" },
+  abricot: { default: "abricot-burley", burley: "abricot-burley", terror: "abricot-terror" },
+  jenever: { default: "jenever", "no-aroma": "jenever" },
+  kriek: { default: "kriek-burley", burley: "kriek-burley", terror: "kriek-terror" },
+  virgin: { default: "virgin", "no-aroma": "virgin" },
+  anejo: { default: "anejo", "no-aroma": "anejo" },
+  "ruby-grapes": { default: "ruby-grapes", burley: "ruby-grapes" },
+  cookies: { default: "cookies", burley: "cookies" },
 };
 
-export const getFlavorImage = (slug: string, line?: LineId) =>
-  (line ? flavorImages[slug]?.[line] : undefined) ?? flavorImages[slug]?.default ?? "";
+const resolveBase = (slug: string, line?: LineId) =>
+  (line ? flavorBases[slug]?.[line] : undefined) ?? flavorBases[slug]?.default;
+
+// Крупный визуал (страница вкуса, постеры видео).
+export const getFlavorImage = (slug: string, line?: LineId) => {
+  const base = resolveBase(slug, line);
+  return base ? heroImg(base) : "";
+};
+
+// Лёгкое превью (список вкусов на главной, поиск, «следующий аромат»).
+export const getFlavorPreview = (slug: string, line?: LineId) => {
+  const base = resolveBase(slug, line);
+  return base ? previewImg(base) : "";
+};
 
 export const flavorCinematics: Partial<Record<string, string>> = {
   pera: "/media/higgsfield/cinematic/pera-cinematic-v1.mp4",

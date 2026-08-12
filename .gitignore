@@ -2,6 +2,9 @@
 node_modules/
 .pnpm-store/
 
+# Изолированный тулинг для оптимизации ассетов (scripts/optimize-hero.mjs)
+.tooling/
+
 # Build output (сервер собирает сам через pnpm build)
 dist/
 *.tsbuildinfo

@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
-import { getFlavorImage } from "../assets";
+import { getFlavorPreview } from "../assets";
 import { BrandLogo } from "../components/BrandLogo";
 import { SearchOverlay } from "../components/SearchOverlay";
 import { flavors, lines } from "../content";
@@ -94,7 +94,7 @@ export default function HomePage() {
               <span>{String(index + 1).padStart(2, "0")}</span>
               <strong>{flavor.name}</strong>
               <p>{flavor.notes.slice(0, 3).join(" · ")}</p>
-              <img src={getFlavorImage(flavor.slug, activeLine)} alt="" loading="lazy" />
+              <img src={getFlavorPreview(flavor.slug, activeLine)} alt="" loading="lazy" />
               <i aria-hidden="true">↗</i>
             </Link>
           ))}
