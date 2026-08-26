@@ -11,7 +11,7 @@ const getCategoryVisual = (lineId: LineId) =>
   lineId === "terror"
     ? "/media/higgsfield/categories/terror-v2.png"
     : lineId === "cigarro"
-      ? "/products/scenes/connecticut-cigarro-scene-v1.png"
+      ? "/media/higgsfield/categories/cigarro-v1.webp"
     : `/media/higgsfield/categories/${lineId}-v1.webp`;
 
 const getCategoryVideo = (lineId: LineId) => lineId === "cigarro" ? undefined : `/media/higgsfield/categories/${lineId}-v2.mp4`;
