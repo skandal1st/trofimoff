@@ -477,6 +477,10 @@ export const catalogFlavors: Flavor[] = [
       "terror": "Чёрная смородина с плотной сладостью, ягодной кислинкой и оттенком растёртого листа. В Terror этот многогранный профиль звучит на более крепкой и насыщенной базе."
     },
     "images": {
+      "burley": {
+        "hero": "/products/scenes/hurtleberry-burley-scene-v1.webp",
+        "preview": "/products/scenes/hurtleberry-burley-scene-v1.webp"
+      },
       "terror": {
         "hero": "/products/scenes/hurtleberry-terror-scene-v1.webp",
         "preview": "/products/scenes/hurtleberry-terror-scene-v1.webp"
@@ -981,7 +985,12 @@ export const catalogFlavors: Flavor[] = [
     "descriptions": {
       "burley": "Марокканский мандарин с тёплым пряным характером. Сочный цитрус, знакомая праздничная свежесть и тот самый аромат, который без предупреждения включает Новый год."
     },
-    "images": {}
+    "images": {
+      "burley": {
+        "hero": "/products/scenes/tangerine-burley-scene-v1.webp",
+        "preview": "/products/scenes/tangerine-burley-scene-v1.webp"
+      }
+    }
   },
   {
     "id": 38,
@@ -1082,7 +1091,12 @@ export const catalogFlavors: Flavor[] = [
     "descriptions": {
       "burley": "Гаултерия — североамериканское вечнозелёное растение с характерным эфирным, мятным оттенком. Бодрящий, прохладный и многогранный вкус, в котором есть что-то удивительно знакомое."
     },
-    "images": {}
+    "images": {
+      "burley": {
+        "hero": "/products/scenes/wintergreen-burley-scene-v1.webp",
+        "preview": "/products/scenes/wintergreen-burley-scene-v1.webp"
+      }
+    }
   },
   {
     "id": 42,
