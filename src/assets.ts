@@ -1,4 +1,5 @@
 import type { LineId } from "./domain";
+import { getFlavor } from "./content";
 
 const processed = (filename: string) => `/processed/${encodeURIComponent(filename)}`;
 const heroImg = (filename: string) => `/media/higgsfield/${filename}-hero-v1.webp`;
@@ -31,14 +32,20 @@ const resolveBase = (slug: string, line?: LineId) =>
 
 // Крупный визуал (страница вкуса, постеры видео).
 export const getFlavorImage = (slug: string, line?: LineId) => {
+  const flavor = getFlavor(slug);
+  const image = line ? flavor?.images?.[line] : flavor?.images?.[flavor.lines[0]];
+  if (image?.hero) return image.hero;
   const base = resolveBase(slug, line);
-  return base ? heroImg(base) : "";
+  return base ? heroImg(base) : "/media/higgsfield/categories/burley-v1.webp";
 };
 
 // Лёгкое превью (список вкусов на главной, поиск, «следующий аромат»).
 export const getFlavorPreview = (slug: string, line?: LineId) => {
+  const flavor = getFlavor(slug);
+  const image = line ? flavor?.images?.[line] : flavor?.images?.[flavor.lines[0]];
+  if (image?.preview) return image.preview;
   const base = resolveBase(slug, line);
-  return base ? previewImg(base) : "";
+  return base ? previewImg(base) : "/media/higgsfield/categories/burley-v1.webp";
 };
 
 export const flavorCinematics: Partial<Record<string, string>> = {

@@ -10,9 +10,11 @@ import type { LineId } from "../domain";
 const getCategoryVisual = (lineId: LineId) =>
   lineId === "terror"
     ? "/media/higgsfield/categories/terror-v2.png"
+    : lineId === "cigarro"
+      ? "/products/scenes/connecticut-cigarro-scene-v1.png"
     : `/media/higgsfield/categories/${lineId}-v1.webp`;
 
-const getCategoryVideo = (lineId: LineId) => `/media/higgsfield/categories/${lineId}-v2.mp4`;
+const getCategoryVideo = (lineId: LineId) => lineId === "cigarro" ? undefined : `/media/higgsfield/categories/${lineId}-v2.mp4`;
 
 export default function HomePage() {
   const [activeLine, setActiveLine] = useState<LineId>("burley");
@@ -49,18 +51,22 @@ export default function HomePage() {
         </button>
         <div className="stage" ref={stageRef} aria-live="polite">
           <div className="stage__label">COLLECTION / {activeLineData.number}</div>
-          <video
-            key={activeLine}
-            ref={categoryVideoRef}
-            className="stage__product stage__product--video"
-            src={getCategoryVideo(activeLine)}
-            poster={categoryVisual}
-            aria-label={`Визуальный мир категории ${activeLineData.name}`}
-            autoPlay
-            muted
-            playsInline
-            preload="metadata"
-          />
+          {getCategoryVideo(activeLine) ? (
+            <video
+              key={activeLine}
+              ref={categoryVideoRef}
+              className="stage__product stage__product--video"
+              src={getCategoryVideo(activeLine)}
+              poster={categoryVisual}
+              aria-label={`Визуальный мир категории ${activeLineData.name}`}
+              autoPlay
+              muted
+              playsInline
+              preload="metadata"
+            />
+          ) : (
+            <img className="stage__product" src={categoryVisual} alt={`Линейка ${activeLineData.name}`} />
+          )}
           <div className="stage__caption"><span>{activeLineData.name}</span><small>{activeLineData.description}</small></div>
         </div>
         <nav className="line-nav" aria-label="Линейки Trofimoff’s">
@@ -79,7 +85,7 @@ export default function HomePage() {
               <img className="line-nav__thumb" src={getCategoryVisual(line.id)} alt="" />
             </button>
           ))}
-          <a href="#about"><span>05</span><strong>ABOUT</strong></a>
+          <a href="#about"><span>06</span><strong>ABOUT</strong></a>
         </nav>
       </section>
 

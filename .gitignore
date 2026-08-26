@@ -4,6 +4,7 @@ node_modules/
 
 # Изолированный тулинг для оптимизации ассетов (scripts/optimize-hero.mjs)
 .tooling/
+.sheettool/
 
 # Build output (сервер собирает сам через pnpm build)
 dist/

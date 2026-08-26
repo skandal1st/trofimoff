@@ -3,7 +3,7 @@ import type { CSSProperties } from "react";
 import { Link, useParams, useSearchParams } from "react-router-dom";
 import { getFlavorCinematic, getFlavorImage, getFlavorPreview } from "../assets";
 import { BrandLogo } from "../components/BrandLogo";
-import { flavors, getFlavor, lines } from "../content";
+import { flavors, getFlavor, getFlavorDescription, lines } from "../content";
 import type { LineId } from "../domain";
 
 const scoreLabels = {
@@ -159,7 +159,8 @@ export default function FlavorPage() {
   }
 
   const story = cinematicStories[flavor.slug];
-  const statementWords = flavor.shortDescription.split(" ");
+  const activeDescription = getFlavorDescription(flavor, variant);
+  const statementWords = activeDescription.split(" ");
   const statementLead = statementWords.slice(0, Math.min(3, statementWords.length)).join(" ");
   const statementRest = statementWords.slice(Math.min(3, statementWords.length)).join(" ");
   const cinematicMatchesVariant = Boolean(variantFrameSets[flavor.slug]?.[variant] ?? cinematicFrameSets[flavor.slug]);
@@ -197,7 +198,7 @@ export default function FlavorPage() {
             </section>
             <section data-story-chapter="2" className={activeStoryChapter === 2 ? "is-active" : ""}>
               <strong>{story.emphasis[0]}<br />{story.emphasis[1]}</strong>
-              <p>{flavor.fullDescription}</p>
+              <p>{activeDescription}</p>
             </section>
             <section data-story-chapter="3" className={activeStoryChapter === 3 ? "is-active" : ""}>
               <span>PROFILE / {flavor.profile.toUpperCase()}</span>
@@ -217,7 +218,7 @@ export default function FlavorPage() {
           <div className="orbit orbit--one" /><div className="orbit orbit--two" />
           <img src={getFlavorImage(flavor.slug, variant)} alt={`${flavor.name}, упаковка ${variant}`} />
         </div>
-        <p>{flavor.shortDescription}</p>
+        <p>{activeDescription}</p>
         {flavor.lines.length > 1 ? (
           <div className="variant-switcher" aria-label="Вариант линейки">
             {flavor.lines.map((lineId) => <button key={lineId} className={variant === lineId ? "is-active" : ""} onClick={() => selectVariant(lineId)}>{lines.find((line) => line.id === lineId)?.name}</button>)}
@@ -254,7 +255,7 @@ export default function FlavorPage() {
 
       <section className="flavor-copy">
         <span>PROFILE / {flavor.profile.toUpperCase()}</span>
-        <p>{flavor.fullDescription}</p>
+        <p>{activeDescription}</p>
       </section>
 
       <section className="notes">
@@ -264,7 +265,7 @@ export default function FlavorPage() {
       </>
       )}
 
-      <section className="scores">
+      {flavor.scores ? <section className="scores">
         <p>* Редакторская интерпретация описания, не официальные характеристики производителя.</p>
         {Object.entries(flavor.scores).map(([key, score]) => (
           <div key={key} className="score-row">
@@ -273,7 +274,7 @@ export default function FlavorPage() {
             <strong>{score}/5</strong>
           </div>
         ))}
-      </section>
+      </section> : null}
 
       <Link className="next-flavor" to={`/flavors/${nextFlavor.slug}?line=${nextFlavor.lines[0]}`}>
         <span className="next-flavor__label">СЛЕДУЮЩИЙ АРОМАТ</span>

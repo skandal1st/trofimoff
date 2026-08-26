@@ -1,23 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://trofimoff.tdistina.ru/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url><loc>https://trofimoff.tdistina.ru/flavors/pera</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/sri-lanka</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/abricot</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/baileys</loc><priority>0.8</priority></url>
   <url><loc>https://trofimoff.tdistina.ru/flavors/cantalupo</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/cashmere-guava</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/cashmere-nectarine</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/cocos</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/coke</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/cookies</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/crespino</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/dark-plum</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/double-apple</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/elder-flowers</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/grapefruit</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/green-apple</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/green-tea</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/hazelhut</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/hurtleberry</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/kiwi</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/kriek</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/lavander</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/limonata</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/mangifera</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/nobilis</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/nurr</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/old-school-orange</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/opuntia-pear</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/pan-banan</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/passion-fruit</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/peche</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/pera</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/pineapple</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/pop-corn</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/red-currant</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/regan</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/ruby-grapes</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/tangerine</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/the-rose</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/watermelon</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/wild-strawberry</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/wintergreen</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/yellow-lemon</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/finlandia-vanila</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/cognac</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/italia</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/jenever</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/like-zaghoul</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/limoncello</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/ortica</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/shurale</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/spirit</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/virgin</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/crio</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/connecticut</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/drama</loc><priority>0.8</priority></url>
+  <url><loc>https://trofimoff.tdistina.ru/flavors/pepe</loc><priority>0.8</priority></url>
   <url><loc>https://trofimoff.tdistina.ru/flavors/taste</loc><priority>0.8</priority></url>
   <url><loc>https://trofimoff.tdistina.ru/flavors/truth</loc><priority>0.8</priority></url>
   <url><loc>https://trofimoff.tdistina.ru/flavors/goodness</loc><priority>0.8</priority></url>
   <url><loc>https://trofimoff.tdistina.ru/flavors/beauty</loc><priority>0.8</priority></url>
-  <url><loc>https://trofimoff.tdistina.ru/flavors/limoncello</loc><priority>0.8</priority></url>
-  <url><loc>https://trofimoff.tdistina.ru/flavors/wild-strawberry</loc><priority>0.8</priority></url>
-  <url><loc>https://trofimoff.tdistina.ru/flavors/abricot</loc><priority>0.8</priority></url>
-  <url><loc>https://trofimoff.tdistina.ru/flavors/jenever</loc><priority>0.8</priority></url>
-  <url><loc>https://trofimoff.tdistina.ru/flavors/kriek</loc><priority>0.8</priority></url>
-  <url><loc>https://trofimoff.tdistina.ru/flavors/virgin</loc><priority>0.8</priority></url>
-  <url><loc>https://trofimoff.tdistina.ru/flavors/anejo</loc><priority>0.8</priority></url>
-  <url><loc>https://trofimoff.tdistina.ru/flavors/ruby-grapes</loc><priority>0.8</priority></url>
-  <url><loc>https://trofimoff.tdistina.ru/flavors/cookies</loc><priority>0.8</priority></url>
 </urlset>
