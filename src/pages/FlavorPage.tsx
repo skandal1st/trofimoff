@@ -74,6 +74,7 @@ export default function FlavorPage() {
   const [variant, setVariant] = useState<LineId>(() => requestedLine && flavor?.lines.includes(requestedLine) ? requestedLine : flavor?.lines[0] ?? "burley");
   const [activeStoryChapter, setActiveStoryChapter] = useState(0);
   const storyRef = useRef<HTMLElement>(null);
+  const staticExperienceRef = useRef<HTMLElement>(null);
   const storyCanvasRef = useRef<HTMLCanvasElement>(null);
   const cinematicFramesRef = useRef<HTMLImageElement[]>([]);
   const experienceFamily = getExperienceFamily(flavor?.archetype ?? "fruit");
@@ -149,6 +150,31 @@ export default function FlavorPage() {
       window.removeEventListener("resize", updateChapter);
     };
   }, [slug]);
+
+  useEffect(() => {
+    const section = staticExperienceRef.current;
+    if (!section || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      const bounds = section.getBoundingClientRect();
+      const range = Math.max(1, bounds.height - window.innerHeight);
+      const progress = Math.max(0, Math.min(1, -bounds.top / range));
+      section.style.setProperty("--static-progress", progress.toFixed(4));
+      section.dataset.staticChapter = String(Math.min(2, Math.floor(progress * 3)));
+    };
+    const requestUpdate = () => {
+      if (!frame) frame = window.requestAnimationFrame(update);
+    };
+    update();
+    window.addEventListener("scroll", requestUpdate, { passive: true });
+    window.addEventListener("resize", requestUpdate);
+    return () => {
+      window.removeEventListener("scroll", requestUpdate);
+      window.removeEventListener("resize", requestUpdate);
+      if (frame) window.cancelAnimationFrame(frame);
+    };
+  }, [slug, variant]);
   const nextFlavor = useMemo(() => {
     const index = flavors.findIndex((item) => item.slug === slug);
     return flavors[(index + 1) % flavors.length];
@@ -230,44 +256,67 @@ export default function FlavorPage() {
         ) : null}
       </section>
 
-      <section id="experience" className={`experience experience--${experienceFamily}${cinematic ? " experience--cinematic" : ""}`}>
+      {cinematic ? <>
+      <section id="experience" className={`experience experience--${experienceFamily} experience--cinematic`}>
         <div className="experience__sticky">
-          <span>{cinematic ? "CINEMATIC EXPERIENCE" : "STANDARD EXPERIENCE"}</span>
-          {cinematic ? (
-            <>
-              <video
-                className="experience__film"
-                src={cinematic}
-                poster={getFlavorImage(flavor.slug, variant)}
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="metadata"
-                aria-hidden="true"
-              />
-              <img className="experience__fallback" src={getFlavorImage(flavor.slug, variant)} alt="" />
-            </>
-          ) : (
-            <>
-              <div className="experience__word" aria-hidden="true">{activeNotes[0]}</div>
-              <img src={getFlavorImage(flavor.slug, variant)} alt="" />
-            </>
-          )}
+          <span>CINEMATIC EXPERIENCE</span>
+          <video className="experience__film" src={cinematic} poster={getFlavorImage(flavor.slug, variant)} autoPlay muted loop playsInline preload="metadata" aria-hidden="true" />
+          <img className="experience__fallback" src={getFlavorImage(flavor.slug, variant)} alt="" />
         </div>
       </section>
 
       <section className="notes">
-        <h2>FLAVOR<br />NOTES</h2>
+        <header className="notes__heading">
+          <h2>FLAVOR<br />NOTES</h2>
+          <p>{flavor.name} / {lines.find((line) => line.id === variant)?.name}<br />{activeNotes.length} {activeNotes.length === 1 ? "НОТА" : activeNotes.length < 5 ? "НОТЫ" : "НОТ"} В ПРОФИЛЕ</p>
+        </header>
         <div>{activeNotes.map((note, index) => <span key={note}><i>{String(index + 1).padStart(2, "0")}</i>{note}</span>)}</div>
       </section>
+      </> : (
+        <section ref={staticExperienceRef} id="experience" className={`static-narrative static-narrative--${experienceFamily}`} data-static-chapter="0">
+          <div className="static-narrative__stage">
+            <img src={getFlavorImage(flavor.slug, variant)} alt="" />
+            <div className="static-narrative__shade" aria-hidden="true" />
+            <span className="static-narrative__label">PRODUCT STUDY / SCROLL</span>
+            <div className="static-narrative__progress" aria-hidden="true"><i /></div>
+          </div>
+          <div className="static-narrative__chapters">
+            <section className="static-narrative__accent">
+              <div>
+                <span>{lines.find((line) => line.id === variant)?.name} / {activeArchetype.toUpperCase()}</span>
+                <strong>{activeNotes[0]}</strong>
+                {activeNotes[1] ? <p>{activeNotes[1]}</p> : null}
+              </div>
+            </section>
+            <section className="static-narrative__notes">
+              <header>
+                <h2>FLAVOR<br />NOTES</h2>
+                <p>{flavor.name} / {activeNotes.length} {activeNotes.length === 1 ? "НОТА" : activeNotes.length < 5 ? "НОТЫ" : "НОТ"}</p>
+              </header>
+              <div>{activeNotes.map((note, index) => <span key={note}><i>{String(index + 1).padStart(2, "0")}</i>{note}</span>)}</div>
+            </section>
+            <section className="static-narrative__copy">
+              <aside>
+                <span>PROFILE / {flavor.profile.toUpperCase()}</span>
+                <strong>{flavor.name}</strong>
+                <small>{activeNotes.slice(0, 3).join(" / ")}</small>
+              </aside>
+              <div>{activeDescription.split(/\r?\n+/).filter(Boolean).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
+            </section>
+          </div>
+        </section>
+      )}
       </>
       )}
 
-      <section className="flavor-copy">
-        <span>PROFILE / {flavor.profile.toUpperCase()}</span>
+      {cinematic ? <section className="flavor-copy">
+        <aside className="flavor-copy__identity">
+          <span>PROFILE / {flavor.profile.toUpperCase()}</span>
+          <strong>{flavor.name}</strong>
+          <small>{activeNotes.slice(0, 3).join(" / ")}</small>
+        </aside>
         <div className="flavor-copy__body">{activeDescription.split(/\r?\n+/).filter(Boolean).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
-      </section>
+      </section> : null}
 
       {activeScores ? <section className="scores">
         <p>* Редакторская интерпретация описания, не официальные характеристики производителя.</p>
