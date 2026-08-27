@@ -179,7 +179,10 @@ footer .brand-logo { width: 175px; }
 .experience__fallback { display: none; position: relative; z-index: 2; width: min(82vw, 760px); height: min(82vw, 760px); object-fit: contain; filter: drop-shadow(0 42px 54px rgba(15,0,3,.45)); }
 .flavor-copy { display: grid; grid-template-columns: .75fr 1.25fr; gap: 4rem; padding: 10vw 3.6vw; background: var(--wine-deep); color: var(--paper); }
 .flavor-copy span { font-size: .62rem; letter-spacing: .2em; }
-.flavor-copy p { max-width: 33ch; margin: 0; font-size: clamp(1.7rem, 3.2vw, 3.7rem); line-height: 1.22; }
+.flavor-copy__body { width: min(100%, 54rem); }
+.flavor-copy__body p { max-width: 54rem; margin: 0; font: 400 clamp(1rem, 1.35vw, 1.3rem)/1.7 "Manrope", sans-serif; text-wrap: pretty; }
+.flavor-copy__body p + p { margin-top: 1.25rem; }
+.flavor-copy__body p:first-child { font-family: "Oswald", "Arial Narrow", sans-serif; font-size: clamp(1.65rem, 2.6vw, 3rem); line-height: 1.18; }
 .notes { display: grid; grid-template-columns: 1fr 1fr; gap: 5vw; padding: 10vw 3.6vw; }
 .notes h2 { margin: 0; font: 400 clamp(6rem, 14vw, 15rem)/.72 "Bebas Neue"; color: var(--wine); }
 .notes > div { align-self: end; }

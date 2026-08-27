@@ -1,5 +1,5 @@
 import { catalogFlavors } from "./catalog.generated";
-import type { Flavor, Line, LineId } from "./domain";
+import type { Flavor, FlavorScores, Line, LineId } from "./domain";
 
 export const lines: Line[] = [
   { id: "burley", name: "BURLEY", number: "01", description: "В основе табачный лист Burley средней или выше средней крепости. По желанию, можно сделать пониже, если поэкспериментировать со способами забивки и миксологией.", accent: "#d84a45" },
@@ -19,3 +19,7 @@ const limitedFlavors: Flavor[] = [
 export const flavors: Flavor[] = [...catalogFlavors, ...limitedFlavors];
 export const getFlavor = (slug: string) => flavors.find((flavor) => flavor.slug === slug);
 export const getFlavorDescription = (flavor: Flavor, line?: LineId) => (line ? flavor.descriptions?.[line] : undefined) ?? flavor.fullDescription;
+export const getFlavorShortDescription = (flavor: Flavor, line?: LineId) => (line ? flavor.shortDescriptions?.[line] : undefined) ?? flavor.shortDescription;
+export const getFlavorNotes = (flavor: Flavor, line?: LineId) => (line ? flavor.notesByLine?.[line] : undefined) ?? flavor.notes;
+export const getFlavorArchetype = (flavor: Flavor, line?: LineId) => (line ? flavor.archetypes?.[line] : undefined) ?? flavor.archetype;
+export const getFlavorScores = (flavor: Flavor, line?: LineId): FlavorScores | undefined => (line ? flavor.scoresByLine?.[line] : undefined) ?? flavor.scores;

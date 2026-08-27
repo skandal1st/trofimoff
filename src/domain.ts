@@ -1,5 +1,13 @@
 export type LineId = "burley" | "terror" | "no-aroma" | "cigarro" | "limited";
 
+export type FlavorScores = {
+  sweetness: number;
+  acidity: number;
+  freshness: number;
+  spice: number;
+  tobacco: number;
+};
+
 export type Flavor = {
   id: number;
   slug: string;
@@ -12,8 +20,12 @@ export type Flavor = {
   notes: string[];
   archetype: string;
   descriptions?: Partial<Record<LineId, string>>;
+  shortDescriptions?: Partial<Record<LineId, string>>;
+  notesByLine?: Partial<Record<LineId, string[]>>;
+  archetypes?: Partial<Record<LineId, string>>;
   images?: Partial<Record<LineId, { hero: string; preview: string; master?: string }>>;
-  scores?: { sweetness: number; acidity: number; freshness: number; spice: number; tobacco: number };
+  scores?: FlavorScores;
+  scoresByLine?: Partial<Record<LineId, FlavorScores>>;
 };
 
 export type Line = {
